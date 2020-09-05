@@ -5,8 +5,11 @@ import 'Video.dart';
 class Posts {
   static List<Post> posts = [
     Post(
-      video: '',
-      owner: User(name: 'James', country: 'Canada', profileImg: ''),
+      video: 'assets/videos/Butterfly-209.mp4',
+      owner: User(
+          name: 'James',
+          country: 'Canada',
+          profileImg: 'assets/images/user1.png'),
       commentsCount: 234,
       description: 'Some long ass description',
       likesCount: 543,
@@ -16,8 +19,11 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: '',
-      owner: User(name: 'James', country: 'Canada', profileImg: ''),
+      video: 'assets/videos/Butterfly-209.mp4',
+      owner: User(
+          name: 'James',
+          country: 'Canada',
+          profileImg: 'assets/images/user2.png'),
       commentsCount: 234,
       description: 'Some long ass description',
       likesCount: 543,
@@ -27,8 +33,11 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: '',
-      owner: User(name: 'James', country: 'Canada', profileImg: ''),
+      video: 'assets/videos/Butterfly-209.mp4',
+      owner: User(
+          name: 'James',
+          country: 'Canada',
+          profileImg: 'assets/images/user3.png'),
       commentsCount: 234,
       description: 'Some long ass description',
       likesCount: 543,
@@ -38,8 +47,11 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: '',
-      owner: User(name: 'James', country: 'Canada', profileImg: ''),
+      video: 'assets/videos/Butterfly-209.mp4',
+      owner: User(
+          name: 'James',
+          country: 'Canada',
+          profileImg: 'assets/images/user4.png'),
       commentsCount: 234,
       description: 'Some long ass description',
       likesCount: 543,
@@ -49,8 +61,11 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: '',
-      owner: User(name: 'James', country: 'Canada', profileImg: ''),
+      video: 'assets/videos/Butterfly-209.mp4',
+      owner: User(
+          name: 'James',
+          country: 'Canada',
+          profileImg: 'assets/images/user5.png'),
       commentsCount: 234,
       description: 'Some long ass description',
       likesCount: 543,

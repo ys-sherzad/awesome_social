@@ -1,6 +1,7 @@
 import './utils/colorLib.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import './screens/latestPosts.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -39,11 +40,12 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: Container(
-        child: Center(
-          child: Text('Hello there'),
-        ),
-      ),
+      body: LatestPosts(),
+      // Container(
+      //   child: Center(
+      //     child: Text('Hello there'),
+      //   ),
+      // ),
     );
   }
 }

@@ -4,35 +4,35 @@ class Users {
   static List<User> users = [
     User(
       name: 'Aaron',
-      profileImg: '',
+      profileImg: 'assets/images/user1.png',
     ),
     User(
       name: 'Roony',
-      profileImg: '',
+      profileImg: 'assets/images/user2.png',
     ),
     User(
       name: 'Caleb',
-      profileImg: '',
+      profileImg: 'assets/images/user3.png',
     ),
     User(
       name: 'Danny',
-      profileImg: '',
+      profileImg: 'assets/images/user4.png',
     ),
     User(
       name: 'Fabian',
-      profileImg: '',
+      profileImg: 'assets/images/user5.png',
     ),
     User(
       name: 'Ballemy',
-      profileImg: '',
+      profileImg: 'assets/images/user6.png',
     ),
     User(
       name: 'Shanon',
-      profileImg: '',
+      profileImg: 'assets/images/user7.png',
     ),
     User(
       name: 'Melinda',
-      profileImg: '',
+      profileImg: 'assets/images/user8.png',
     )
   ];
 }
