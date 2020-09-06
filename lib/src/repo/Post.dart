@@ -3,6 +3,7 @@ import 'Video.dart';
 
 class Post {
   final String video;
+  final String image;
   final int likesCount;
   final int commentsCount;
   final int viewsCount;
@@ -14,6 +15,7 @@ class Post {
 
   Post(
       {this.video,
+      this.image,
       this.likesCount,
       this.commentsCount,
       this.viewsCount,

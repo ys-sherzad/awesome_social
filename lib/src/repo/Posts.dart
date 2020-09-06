@@ -6,6 +6,7 @@ class Posts {
   static List<Post> posts = [
     Post(
       video: 'assets/videos/Butterfly-209.mp4',
+      image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
           country: 'Canada',
@@ -20,6 +21,7 @@ class Posts {
     ),
     Post(
       video: 'assets/videos/Butterfly-209.mp4',
+      image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
           country: 'Canada',
@@ -34,6 +36,7 @@ class Posts {
     ),
     Post(
       video: 'assets/videos/Butterfly-209.mp4',
+      image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
           country: 'Canada',
@@ -48,6 +51,7 @@ class Posts {
     ),
     Post(
       video: 'assets/videos/Butterfly-209.mp4',
+      image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
           country: 'Canada',
@@ -62,6 +66,7 @@ class Posts {
     ),
     Post(
       video: 'assets/videos/Butterfly-209.mp4',
+      image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
           country: 'Canada',

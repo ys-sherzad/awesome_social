@@ -4,35 +4,74 @@ import '../repo/Users.dart';
 import '../components/postItem.dart';
 import '../repo/Posts.dart';
 
-class LatestPosts extends StatelessWidget {
-  const LatestPosts({Key key}) : super(key: key);
+import '../components/multi_manager/flick_multi_manager.dart';
+// import '../components/multi_manager/flick_multi_player.dart';
+import 'package:visibility_detector/visibility_detector.dart';
+
+class LatestPosts extends StatefulWidget {
+  LatestPosts({Key key}) : super(key: key);
+
+  @override
+  _LatestPostsState createState() => _LatestPostsState();
+}
+
+class _LatestPostsState extends State<LatestPosts> {
+  FlickMultiManager flickMultiManager;
+
+  @override
+  void initState() {
+    super.initState();
+    flickMultiManager = FlickMultiManager();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        // Card(
-        //   child: Container(
-        //     color: Colors.white,
-        //     height: 200,
-        //     child: Center(
-        //       child: Text("I'm a fixed list header"),
-        //     ),
-        //   ),
-        // ),
-        Expanded(
+    return VisibilityDetector(
+      key: ObjectKey(flickMultiManager),
+      onVisibilityChanged: (visibility) {
+        if (visibility.visibleFraction == 0 && this.mounted) {
+          flickMultiManager.pause();
+        }
+      },
+      child: Container(
+        child: Expanded(
           child: ListView.builder(
             itemCount: Posts.posts.length,
             itemBuilder: (context, index) {
               return PostItem(
+                flickMultiManager: flickMultiManager,
                 posts: Posts.posts,
                 users: Users.users,
                 currentIndex: index,
               );
             },
           ),
-        )
-      ],
+        ),
+      ),
     );
   }
 }
+
+// class LatestPosts extends StatelessWidget {
+//   const LatestPosts({Key key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: [
+// Expanded(
+//   child: ListView.builder(
+//     itemCount: Posts.posts.length,
+//     itemBuilder: (context, index) {
+//       return PostItem(
+//         posts: Posts.posts,
+//         users: Users.users,
+//         currentIndex: index,
+//       );
+//     },
+//   ),
+// )
+//       ],
+//     );
+//   }
+// }

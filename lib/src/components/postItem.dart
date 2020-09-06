@@ -1,15 +1,23 @@
+import '../components/multi_manager/flick_multi_manager.dart';
 import 'package:flutter/material.dart';
 import '../repo/User.dart';
 import '../repo/Post.dart';
 import '../components/stories.dart';
 import './postItemHeader.dart';
-import './video.dart';
+import './video2.dart';
+// import './video.dart';
 
 class PostItem extends StatelessWidget {
+  final FlickMultiManager flickMultiManager;
   final List<Post> posts;
   final List<User> users;
   final int currentIndex;
-  const PostItem({Key key, this.posts, this.users, this.currentIndex})
+  const PostItem(
+      {Key key,
+      this.flickMultiManager,
+      this.posts,
+      this.users,
+      this.currentIndex})
       : super(key: key);
 
   Widget _buildNormalPostItem() {
@@ -21,7 +29,11 @@ class PostItem extends StatelessWidget {
           SizedBox(
             height: 2.0,
           ),
-          Video(videoPath: posts[currentIndex].video),
+          // Video(videoPath: posts[currentIndex].video),
+          Video2(
+            flickMultiManager: flickMultiManager,
+            post: posts[currentIndex],
+          ),
         ],
       ),
     );
