@@ -29,25 +29,27 @@ class _LatestPostsState extends State<LatestPosts> {
     return VisibilityDetector(
       key: ObjectKey(flickMultiManager),
       onVisibilityChanged: (visibility) {
+        print('visibity >>> ' + visibility.visibleFraction.toString());
         if (visibility.visibleFraction == 0 && this.mounted) {
           flickMultiManager.pause();
         }
       },
-      child: Container(
-        child: Expanded(
-          child: ListView.builder(
-            itemCount: Posts.posts.length,
-            itemBuilder: (context, index) {
-              return PostItem(
-                flickMultiManager: flickMultiManager,
-                posts: Posts.posts,
-                users: Users.users,
-                currentIndex: index,
-              );
-            },
-          ),
+      child:
+          // Container(
+          Expanded(
+        child: ListView.builder(
+          itemCount: Posts.posts.length,
+          itemBuilder: (context, index) {
+            return PostItem(
+              flickMultiManager: flickMultiManager,
+              posts: Posts.posts,
+              users: Users.users,
+              currentIndex: index,
+            );
+          },
         ),
       ),
+      // ),
     );
   }
 }

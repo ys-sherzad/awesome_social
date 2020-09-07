@@ -12,10 +12,11 @@ class Video2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
-      margin: EdgeInsets.all(2),
+      height: 360,
+      // margin: EdgeInsets.only(bottom: 0),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(12.0), topRight: Radius.circular(12.0)),
         child: FlickMultiPlayer(
           url: post.video,
           flickMultiManager: flickMultiManager,
