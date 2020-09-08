@@ -3,25 +3,104 @@ import './multi_manager/flick_multi_player.dart';
 import './multi_manager/flick_multi_manager.dart';
 import 'package:flutter/material.dart';
 import '../repo/Post.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import '../styles/common.dart';
+import 'ButtonIcon.dart';
 
 class Video2 extends StatelessWidget {
   final FlickMultiManager flickMultiManager;
   final Post post;
   const Video2({Key key, this.flickMultiManager, this.post}) : super(key: key);
 
+  Widget _postActions() {
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Icon(
+            Feather.heart,
+            size: kIconSize,
+          ),
+          Text(
+            post.likesCount.toString(),
+            style: kPostActionButtonText,
+          ),
+          SizedBox(
+            width: 8.0,
+          ),
+          Icon(
+            Feather.message_circle,
+            size: kIconSize,
+          ),
+          Text(
+            post.commentsCount.toString(),
+            style: kPostActionButtonText,
+          ),
+          SizedBox(
+            width: 8.0,
+          ),
+          Icon(
+            Feather.eye,
+            size: kIconSize,
+          ),
+          Text(
+            post.viewsCount.toString(),
+            style: kPostActionButtonText,
+          ),
+        ],
+      ),
+    );
+  }
+
+  _onGoToPostScreen(BuildContext context) {
+    Navigator.pushNamed(context, '/post');
+  }
+
+  Widget _arrowRight(BuildContext context) {
+    return ButtonIcon(
+      onPress: () => _onGoToPostScreen(context),
+      icon: Icon(Feather.chevron_right),
+      iconColor: Colors.white,
+    );
+  }
+
+  Widget _separator() {
+    return SizedBox(width: 60.0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 360,
-      // margin: EdgeInsets.only(bottom: 0),
-      child: ClipRRect(
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(12.0), topRight: Radius.circular(12.0)),
-        child: FlickMultiPlayer(
-          url: post.video,
-          flickMultiManager: flickMultiManager,
-          image: post.image,
-        ),
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        borderRadius: kCardBorderRadius,
+      ),
+      child: Column(
+        children: [
+          Container(
+            height: 360,
+            child: ClipRRect(
+              borderRadius: kCardBorderRadius,
+              child: FlickMultiPlayer(
+                url: post.video,
+                flickMultiManager: flickMultiManager,
+                image: post.image,
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
+            height: 60.0,
+            child: Row(
+              children: [
+                _postActions(),
+                _separator(),
+                _arrowRight(context),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

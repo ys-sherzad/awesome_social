@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../repo/Post.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import '../styles/common.dart';
 
 class PostItemHeader extends StatelessWidget {
   final Post post;
@@ -23,9 +24,15 @@ class PostItemHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(post.owner.profileImg),
-              SizedBox(height: 2.0),
-              Text(post.location),
+              Text(
+                post.owner.name,
+                style: kUserName,
+              ),
+              // SizedBox(height: 1.0),
+              Text(
+                post.location,
+                style: kLocation,
+              ),
             ],
           ),
           Expanded(

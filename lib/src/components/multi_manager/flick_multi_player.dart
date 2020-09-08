@@ -53,30 +53,30 @@ class _FlickMultiPlayerState extends State<FlickMultiPlayer> {
         child: FlickVideoPlayer(
           flickManager: flickManager,
           flickVideoWithControls: FlickVideoWithControls(
-            // playerLoadingFallback: Positioned.fill(
-            //   child: Stack(
-            //     children: <Widget>[
-            //       Positioned.fill(
-            //         child: Image.asset(
-            //           widget.image,
-            //           fit: BoxFit.cover,
-            //         ),
-            //       ),
-            //       Positioned(
-            //         right: 10,
-            //         top: 10,
-            //         child: Container(
-            //           width: 20,
-            //           height: 20,
-            //           child: CircularProgressIndicator(
-            //             backgroundColor: Colors.white,
-            //             strokeWidth: 1,
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
+            playerLoadingFallback: Positioned.fill(
+              child: Stack(
+                children: <Widget>[
+                  Positioned.fill(
+                    child: Image.asset(
+                      widget.image,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Positioned(
+                    right: 10,
+                    top: 10,
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        backgroundColor: Colors.white,
+                        strokeWidth: 1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             controls: FeedPlayerPortraitControls(
               flickMultiManager: widget.flickMultiManager,
               flickManager: flickManager,
@@ -84,10 +84,6 @@ class _FlickMultiPlayerState extends State<FlickMultiPlayer> {
           ),
           flickVideoWithControlsFullscreen: FlickVideoWithControls(
             playerLoadingFallback: Center(
-              // child: Image.network(
-              //   widget.image,
-              //   fit: BoxFit.fitWidth,
-              // ),
               child: Image.asset(
                 widget.image,
                 fit: BoxFit.fitWidth,

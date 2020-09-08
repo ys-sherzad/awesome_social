@@ -1,5 +1,3 @@
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-
 import '../components/multi_manager/flick_multi_manager.dart';
 import 'package:flutter/material.dart';
 import '../repo/User.dart';
@@ -22,27 +20,6 @@ class PostItem extends StatelessWidget {
       this.currentIndex})
       : super(key: key);
 
-  Widget _postActions() {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Icon(Feather.heart),
-          Icon(Feather.message_circle),
-          Icon(Feather.eye),
-        ],
-      ),
-    );
-  }
-
-  Widget _arrowRight() {
-    return Container(
-      padding: EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-      child: Icon(Feather.chevron_right),
-    );
-  }
-
   Widget _buildNormalPostItem(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(20.0),
@@ -57,25 +34,25 @@ class PostItem extends StatelessWidget {
             flickMultiManager: flickMultiManager,
             post: posts[currentIndex],
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(12.0),
-                bottomRight: Radius.circular(12.0),
-              ),
-            ),
-            height: 60.0,
-            child: Row(
-              children: [
-                _postActions(),
-                SizedBox(
-                  width: 90.0,
-                ),
-                _arrowRight(),
-              ],
-            ),
-          )
+          // Container(
+          //   decoration: BoxDecoration(
+          //     color: Theme.of(context).primaryColor,
+          //     borderRadius: BorderRadius.only(
+          //       bottomLeft: Radius.circular(12.0),
+          //       bottomRight: Radius.circular(12.0),
+          //     ),
+          //   ),
+          //   height: 60.0,
+          //   child: Row(
+          //     children: [
+          //       _postActions(),
+          //       SizedBox(
+          //         width: 90.0,
+          //       ),
+          //       _arrowRight(),
+          //     ],
+          //   ),
+          // )
         ],
       ),
     );
