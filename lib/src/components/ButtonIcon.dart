@@ -1,3 +1,4 @@
+import 'package:awesome_social/src/utils/colorLib.dart';
 import 'package:flutter/material.dart';
 import '../styles/common.dart';
 
@@ -21,7 +22,7 @@ class ButtonIcon extends StatelessWidget {
       // shadowColor: Colorlib.shadow,
       borderRadius: BorderRadius.circular(32.0),
       clipBehavior: Clip.hardEdge,
-      color: Theme.of(context).primaryColor,
+      color: ColorLib.primary2,
       child: Ink(
         height: 40,
         width: 40,

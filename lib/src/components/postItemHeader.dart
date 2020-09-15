@@ -1,3 +1,4 @@
+import 'package:awesome_social/src/utils/colorLib.dart';
 import 'package:flutter/material.dart';
 import '../repo/Post.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -38,7 +39,7 @@ class PostItemHeader extends StatelessWidget {
           Expanded(
             child: Container(),
           ),
-          Icon(Feather.more_vertical),
+          Icon(Feather.more_vertical, color: ColorLib.textPrimary),
         ],
       ),
     );

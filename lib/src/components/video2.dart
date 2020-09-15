@@ -1,4 +1,6 @@
 // import 'package:awesome_social/src/components/multi_manager/flick_multi_manager.dart';
+import 'package:awesome_social/src/utils/colorLib.dart';
+
 import './multi_manager/flick_multi_player.dart';
 import './multi_manager/flick_multi_manager.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +23,7 @@ class Video2 extends StatelessWidget {
           Icon(
             Feather.heart,
             size: kIconSize,
+            color: ColorLib.textPrimary,
           ),
           Text(
             post.likesCount.toString(),
@@ -32,6 +35,7 @@ class Video2 extends StatelessWidget {
           Icon(
             Feather.message_circle,
             size: kIconSize,
+            color: ColorLib.textPrimary,
           ),
           Text(
             post.commentsCount.toString(),
@@ -43,6 +47,7 @@ class Video2 extends StatelessWidget {
           Icon(
             Feather.eye,
             size: kIconSize,
+            color: ColorLib.textPrimary,
           ),
           Text(
             post.viewsCount.toString(),
@@ -61,7 +66,7 @@ class Video2 extends StatelessWidget {
     return ButtonIcon(
       onPress: () => _onGoToPostScreen(context),
       icon: Icon(Feather.chevron_right),
-      iconColor: Colors.white,
+      iconColor: ColorLib.textPrimary,
     );
   }
 
@@ -73,15 +78,15 @@ class Video2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        borderRadius: kCardBorderRadius,
+        color: ColorLib.primary2,
+        borderRadius: kCardBorderRadiusRound,
       ),
       child: Column(
         children: [
           Container(
             height: 360,
             child: ClipRRect(
-              borderRadius: kCardBorderRadius,
+              borderRadius: kCardBorderRadiusRound,
               child: FlickMultiPlayer(
                 url: post.video,
                 flickMultiManager: flickMultiManager,
@@ -90,7 +95,7 @@ class Video2 extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
+            padding: kHorizontalOffset10,
             height: 60.0,
             child: Row(
               children: [

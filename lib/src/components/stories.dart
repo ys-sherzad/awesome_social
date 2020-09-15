@@ -1,3 +1,5 @@
+import 'package:awesome_social/src/styles/common.dart';
+import 'package:awesome_social/src/utils/colorLib.dart';
 import 'package:flutter/material.dart';
 import '../repo/User.dart';
 
@@ -8,7 +10,7 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Theme.of(context).primaryColor,
+        color: ColorLib.primary2,
         height: 110,
         width: double.infinity,
         child: ListView.builder(
@@ -33,7 +35,10 @@ class Stories extends StatelessWidget {
             SizedBox(
               height: 12.0,
             ),
-            Text(users[index].name)
+            Text(
+              users[index].name,
+              style: kStoryUserName,
+            )
           ],
         ));
   }
