@@ -5,8 +5,14 @@ class ButtonIcon extends StatelessWidget {
   final Icon icon;
   final Color iconColor;
   final Function() onPress;
+  final double iconSize;
 
-  const ButtonIcon({Key key, this.icon, this.iconColor, this.onPress})
+  const ButtonIcon(
+      {Key key,
+      this.icon,
+      this.iconColor,
+      this.onPress,
+      this.iconSize = kIconSize})
       : super(key: key);
 
   @override
@@ -23,7 +29,7 @@ class ButtonIcon extends StatelessWidget {
           shape: CircleBorder(),
         ),
         child: IconButton(
-          iconSize: kIconSize,
+          iconSize: iconSize,
           icon: icon,
           color: iconColor,
           onPressed: onPress,

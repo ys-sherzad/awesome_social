@@ -24,4 +24,9 @@ class Post {
       this.location,
       this.description,
       this.userCollection});
+
+  @override
+  String toString() {
+    return 'video >>> $video count >>>> $likesCount';
+  }
 }

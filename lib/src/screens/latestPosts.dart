@@ -29,7 +29,7 @@ class _LatestPostsState extends State<LatestPosts> {
     return VisibilityDetector(
       key: ObjectKey(flickMultiManager),
       onVisibilityChanged: (visibility) {
-        print('visibity >>> ' + visibility.visibleFraction.toString());
+        // print('visibity >>> ' + visibility.visibleFraction.toString());
         if (visibility.visibleFraction == 0 && this.mounted) {
           flickMultiManager.pause();
         }

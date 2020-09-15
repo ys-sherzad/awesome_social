@@ -54,7 +54,7 @@ class Video2 extends StatelessWidget {
   }
 
   _onGoToPostScreen(BuildContext context) {
-    Navigator.pushNamed(context, '/post');
+    Navigator.pushNamed(context, '/post', arguments: {'post': post});
   }
 
   Widget _arrowRight(BuildContext context) {
