@@ -7,6 +7,10 @@ import './screens/postScreen.dart';
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      systemNavigationBarColor: ColorLib.background, // navigation bar color
+      // statusBarColor: Colors.transparent, // status bar color
+    ));
     SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
         title: 'Social',
@@ -15,6 +19,8 @@ class App extends StatelessWidget {
           primaryColor: ColorLib.primary,
           brightness: Brightness.dark,
           scaffoldBackgroundColor: ColorLib.background,
+          accentColor: Colors.white10,
+          accentColorBrightness: Brightness.light,
         ),
         themeMode: ThemeMode.dark,
         // darkTheme: ThemeData(brightness: Brightness.dark),

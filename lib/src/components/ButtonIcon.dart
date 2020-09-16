@@ -7,6 +7,7 @@ class ButtonIcon extends StatelessWidget {
   final Color iconColor;
   final Function() onPress;
   final double iconSize;
+  // final double
 
   const ButtonIcon(
       {Key key,
@@ -19,23 +20,28 @@ class ButtonIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      // shadowColor: Colorlib.shadow,
-      borderRadius: BorderRadius.circular(32.0),
+      type: MaterialType.transparency,
       clipBehavior: Clip.hardEdge,
-      color: ColorLib.primary2,
-      child: Ink(
-        height: 40,
-        width: 40,
-        decoration: const ShapeDecoration(
-          shape: CircleBorder(),
-        ),
-        child: IconButton(
-          iconSize: iconSize,
-          icon: icon,
-          color: iconColor,
-          onPressed: onPress,
-        ),
+      shape: CircleBorder(),
+      child: IconButton(
+        iconSize: iconSize,
+        icon: icon,
+        onPressed: onPress,
       ),
     );
+    // Material(
+    //   shadowColor: Colors.blue,
+    //   borderRadius: BorderRadius.circular(32.0),
+    //   clipBehavior: Clip.hardEdge,
+    //   // color: ColorLib.primary2,
+    //   // color: Colors.blue,
+    //   child: Ink(
+    //     // height: 30,
+    //     // width: 30,
+    //     decoration: const ShapeDecoration(
+    //       shape: CircleBorder(),
+    //     ),
+    //     child:
+    //   ),
   }
 }

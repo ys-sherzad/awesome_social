@@ -79,14 +79,18 @@ class Video2 extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: ColorLib.primary2,
-        borderRadius: kCardBorderRadiusRound,
+        borderRadius: BorderRadius.all(
+          Radius.circular(5.0),
+        ),
       ),
       child: Column(
         children: [
           Container(
             height: 360,
             child: ClipRRect(
-              borderRadius: kCardBorderRadiusRound,
+              borderRadius: BorderRadius.all(
+                Radius.circular(5.0),
+              ),
               child: FlickMultiPlayer(
                 url: post.video,
                 flickMultiManager: flickMultiManager,
@@ -95,8 +99,7 @@ class Video2 extends StatelessWidget {
             ),
           ),
           Container(
-            padding: kHorizontalOffset10,
-            height: 60.0,
+            padding: EdgeInsets.only(left: 10.0, right: 2.0),
             child: Row(
               children: [
                 _postActions(),

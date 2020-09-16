@@ -5,7 +5,7 @@ import 'Video.dart';
 class Posts {
   static List<Post> posts = [
     Post(
-      video: 'assets/videos/Butterfly-209.mp4',
+      video: 'assets/videos/video1.mp4',
       image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
@@ -20,7 +20,7 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: 'assets/videos/Butterfly-209.mp4',
+      video: 'assets/videos/video2.mp4',
       image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
@@ -35,7 +35,7 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: 'assets/videos/Butterfly-209.mp4',
+      video: 'assets/videos/video3.mp4',
       image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
@@ -50,7 +50,7 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: 'assets/videos/Butterfly-209.mp4',
+      video: 'assets/videos/video4.mp4',
       image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',
@@ -65,7 +65,7 @@ class Posts {
       viewsCount: 4032,
     ),
     Post(
-      video: 'assets/videos/Butterfly-209.mp4',
+      video: 'assets/videos/video5.mp4',
       image: 'assets/images/9th_may_poster.jpg',
       owner: User(
           name: 'James',

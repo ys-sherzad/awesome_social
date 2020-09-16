@@ -22,7 +22,8 @@ class PostItem extends StatelessWidget {
 
   Widget _buildNormalPostItem(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20.0),
+      padding:
+          EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0, bottom: 10.0),
       child: Column(
         children: [
           PostItemHeader(post: posts[currentIndex]),

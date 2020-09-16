@@ -11,7 +11,7 @@ class Stories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: ColorLib.primary2,
-        height: 110,
+        height: 90,
         width: double.infinity,
         child: ListView.builder(
           itemCount: users.length,
@@ -37,7 +37,10 @@ class Stories extends StatelessWidget {
             ),
             Text(
               users[index].name,
-              style: kStoryUserName,
+              style: TextStyle(
+                  fontSize: fontSizeMedium,
+                  fontWeight: FontWeight.normal,
+                  color: ColorLib.textPrimary),
             )
           ],
         ));
